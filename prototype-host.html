@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+<head>
+	<title>Prototype</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+	<div class="main">
+		<div class="title txtcenter">
+			<p class="ft30 mb10 txtbold"><em style="color:#820f0f">Robo</em>Host</p>
+			<p class="txtgray">Book your table online</p>
+		</div>
+		<div class="gnb ft0 txtcenter mb30">
+			<a href="#" class="ft14 bbgray mr20">HOST</a>
+			<a href="#" class="ft14">CUSTOMER</a>
+		</div>
+		<div class="contentwrap">
+			<div class="content active owner">
+				<div class="wrap ft0">
+					<div class="menu ft16">
+						<a href="javascript:;" class="active">Restaurant Info</a>
+						<a href="javascript:;">Layout &amp; Tables</a>
+						<a href="javascript:;">Reservations</a>
+						<!-- <a href="javascript:;">Customer Reviews</a> -->
+					</div>
+					<div class="pages">
+						<div class="page active ft16">
+							<div class="inner ft0 relative">
+								<a href="javascript:;" class="btn-apply">Apply</a>
+								<div class="split50 ft16 pd10">
+									<p class="mb10 txtgray">Restaurant Name:</p>
+									<input class="bbgray mb20 inputfull" type="text" value="Nomad Garden">
+									<p class="mb10 txtgray">Address:</p>
+									<input class="bbgray mb20" style="width:345px; display:inline-block;" type="text" value="15th Street, Nomadberg, UK"><a href="javascript:;" class="btn-googlemap"><img src="img/google-maps.png"></a>								
+									<p class="mb10 txtgray">Phone Number:</p>
+									<input class="bbgray mb20 inputfull" type="tel" value="+82 2 332 3334">
+									<p class="mb10 txtgray">Tags:</p>
+									<div class="tags mb15 ft0">
+										<p class="tag">#italian<a href="#">x</a></p>
+										<p class="tag">#quiet<a href="#">x</a></p>
+										<p class="tag">#classy<a href="#">x</a></p>
+										<p class="tag">#specialday<a href="#">x</a></p>
+										<p class="tag">#italianchef<a href="#">x</a></p>
+										<p class="tag">#valetparking<a href="#">x</a></p>
+										<label class="input-tag-label"><input class="bbgray input-tag" type="text"></label>
+									</div>							
+									<p class="mb10 txtgray">Main Image:</p>
+									<div class="mainimageprev mb20"><a href="javascript:;">x</a></div>
+									<!-- <label class="input-img-label txtcenter txtbold mb20">+<input class="input-img-main" type="file"></label> -->
+									<p class="mb10 txtgray">Slide Images:</p>
+									<div class="slideimgs ft0">
+										<label class="input-img-label txtbold txtcenter">+<input class="input-img-slide" type="file"></label>
+										<label class="input-img-label txtbold txtcenter">+<input class="input-img-slide" type="file"></label>
+										<label class="input-img-label txtbold txtcenter">+<input class="input-img-slide" type="file"></label>
+										<label class="input-img-label txtbold txtcenter">+<input class="input-img-slide" type="file"></label>
+										<label class="input-img-label txtbold txtcenter">+<input class="input-img-slide" type="file"></label>
+										<label class="input-img-label txtbold txtcenter">+<input class="input-img-slide" type="file"></label>
+										<label class="input-img-label txtbold txtcenter">+<input class="input-img-slide" type="file"></label>
+									</div>
+								</div>
+								<div class="split50 ft16 pd10">
+									<p class="txtcenter mb20">Card Preview</p>
+									<div class="preview bgray">
+										<div class="prev_image relative">
+											<p class="prev_title txtwhite">Nomad Garden</p>
+										</div>
+										<p class="prev_map"><img src="img/mappin.png" style="width:12px;"><span>Nomadberg, UK</span></p>
+										<p class="prev_tags"><span>#italian</span><span>#quiet</span><span>#classy</span><span>#specialday</span><span>...</span></p>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+						<div class="page ft16">
+							<div class="inner panel tbl relative">
+								<a href="javascript:;" id="layout-submit" class="btn-apply">Apply</a>
+								<div class="panel-layout tblcell pd10">
+									<p class="txtcenter mb10">(Layout)</p>
+									<a href="#" class="btn-floor active">Floor</a>
+									<a href="#" class="btn-room">Room</a>
+									<a href="#" class="btn-pillar">Pillar</a>
+									<a href="#" class="btn-window">Window</a>
+									<a href="#" class="btn-door">Door</a>
+									<a href="#" class="btn-bar">Bar</a>
+									<a href="#" class="btn-stage">Stage</a>
+									<a href="#" class="btn-kitchen">Kitchen</a>
+									<a href="#" class="btn-restroom">Restroom</a>
+									<a href="javascript:;" class="btn-erase"><img src="img/eraser.png"> Eraser</a>
+								</div>
+								<div class="canvas-wrap tblcell">
+									<div class="canvas bgray">
+										<div class="axis x a active"></div>
+										<div class="axis y a active"></div>
+										<div class="axis x b active"></div>
+										<div class="axis y b active"></div>
+									</div>
+								</div>	
+								<div class="panel-table tblcell pd10 relative">
+									<p class="txtcenter mb10">(Table)</p>
+									<a href="#" class="btn-bookable">Bookable</a>
+									<a href="#" class="btn-unavailable">Unavailable</a>
+									<a href="#" class="btn-viponly">VIP Only</a>
+									<div class="shading"></div>
+									<p style="font-size:14px; margin-top:30px;" class="mb10">Table No: <input id="mapid" class="bbgray" type="number" style="width:33px;"></p>
+									<p style="font-size:14px;">Capacity: <input id="capa" class="bbgray" type="number" style="width:33px;"></p>
+									<img id="delete" src="img/delete.png">
+									<img id="save" src="img/save.png">
+								</div>
+							</div>
+						</div>
+						
+						<div class="page ft16">
+							<div class="inner pd10 reserve relative">
+								<div class="rescanvas bgray"></div>
+								<div class="books ft16">
+									<p class="mb10">Table No: <span id="res_tblno"></span></p>
+									<p class="mb20">Availability: <span id="res_avail" class="red">Occupied</span></p>
+									<ul id="res_s" class="bgray lh14">
+										<li>
+											<span class="res_time">09:00 - 12:00</span>
+											<span class="res_ppl">(4)</span>
+											<span class="res_name">Adam West</span>
+											<a href="#" class="res_delete"><img src="img/delete.png"></a>
+										</li>
+										<li>
+											<span class="res_time">12:00 - 15:00</span>
+											<span class="res_ppl">(2)</span>
+											<span class="res_name">Michael Keaton</span>
+											<a href="#" class="res_delete"><img src="img/delete.png"></a>
+										</li>
+										<li>
+											<span class="res_time">16:00 - 18:00</span>
+											<span class="res_ppl">(3)</span>
+											<span class="res_name">Val Kilmer</span>
+											<a href="#" class="res_delete"><img src="img/delete.png"></a>
+										</li>
+										<li>
+											<span class="res_time">19:00 - 20:00</span>
+											<span class="res_ppl">(4)</span>
+											<span class="res_name">George Clooney</span>
+											<a href="#" class="res_delete"><img src="img/delete.png"></a>
+										</li>
+										<li>
+											<span class="res_time">20:00 - 22:00</span>
+											<span class="res_ppl">(2)</span>
+											<span class="res_name">Christian Bale</span>
+											<a href="#" class="res_delete"><img src="img/delete.png"></a>
+										</li>
+										<li>
+											<span class="res_time">22:00 - 23:00</span>
+											<span class="res_ppl">(4)</span>
+											<span class="res_name">Ben Affleck</span>
+											<a href="#" class="res_delete"><img src="img/delete.png"></a>
+										</li>
+									</ul>
+									<a href="#" class="btn-refresh">Refresh</a>
+								</div>
+							</div>
+						</div>
+						
+						<!-- <div class="page ft16">
+							<div class="inner pd10">
+							</div>
+						</div> -->
+					</div>
+				</div>				
+			</div>		
+			
+			<div class="content cust">
+				<div class="mobile bgray">
+					<img src="img/statbar.png" style="position:absolute; top:0; left:0; width:100%; z-index:1000;">
+					<div class="scroll">
+						<p class="ft20 txtbold txtcenter mb10 relative" style="padding:15px 0;background:#fff;"><em style="color:#820f0f">Robo</em>Host <img src="img/mappin.png" style="width:20px;position:absolute;top:15px;right:10px;"></p>
+						<div class="preview bgray cust mb10">
+							<div class="prev_image sample2 relative">
+								<p class="prev_title txtwhite">Kimbob Heaven</p>
+							</div>
+							<p class="prev_map"><img src="img/mappin.png" style="width:12px;"><span>Gangnam, Seoul</span></p>
+							<p class="prev_tags"><span>#korean</span><span>#kimbob</span><span>#variety</span><span>#cheap</span><span>...</span></p>
+						</div>
+						<div class="preview bgray cust mb10">
+							<div class="prev_image sample3 relative">
+								<p class="prev_title txtwhite">Sea World Dining</p>
+							</div>
+							<p class="prev_map"><img src="img/mappin.png" style="width:12px;"><span>Tokyo, JP</span></p>
+							<p class="prev_tags"><span>#japanese</span><span>#sushi</span><span>#sashimi</span><span>#seafood</span><span>...</span></p>
+						</div>
+						<a href="javascript:;" id="proceed" class="preview bgray cust">
+							<div class="prev_image relative">
+								<p class="prev_title txtwhite">Nomad Garden</p>
+							</div>
+							<p class="prev_map"><img src="img/mappin.png" style="width:12px;"><span>Nomadberg, UK</span></p>
+							<p class="prev_tags"><span>#italian</span><span>#quiet</span><span>#classy</span><span>#specialday</span><span>...</span></p>
+						</a>
+						
+						<div class="reserve2 ft0 mb10">
+							<input id="reserve-date" type="date" class="bbgray">
+							<select id="reserve-time1" class="bbgray">
+								<option>17:00</option>
+								<option>18:00</option>								
+								<option>19:00</option>
+								<option>20:00</option>
+								<option>21:00</option>								
+								<option>22:00</option>
+							</select>
+							<span class="ft16"> - </span>
+							<select id="reserve-time2" class="bbgray">
+								<option>18:00</option>
+								<option>19:00</option>								
+								<option>20:00</option>
+								<option>21:00</option>
+								<option>22:00</option>								
+								<option>23:00</option>
+							</select>
+						</div>
+						<div class="reserve3">
+							<div class="layoutmap relative mb10">
+								
+							</div>
+							<div class="customerdata pd10">
+								<p class="mb20">Booking Information:</p>
+								<input type="text" class="inputfull bbgray mb10" placeholder="Name" id="book-name">
+								<input type="text" class="inputfull bbgray mb10" placeholder="Phone Number" id="book-phone">
+								<input type="text" class="inputfull bbgray mb10" placeholder="Number of Seats" id="book-seats">
+								<label class="inputfull mb20" style="display:block;"><input type="checkbox" id="book-vallet" style="margin-right:5px;">Need a Vallet</label>
+								<a href="javascript:;" class="btn-book">Book This Table</a>
+							</div>
+							<div class="result pd10">
+								<p class="mb10 txtbold">Nomad Garden</p>
+								<p class="mb10 txtgray">15th Street, Nomadberg, UK</p>
+								<p class="mb20 txtgray">+82 2 332 3334</p>								
+								<p class="mb10" id="book-datetime-out"></p>
+								<p class="mb10" id="book-name-out"></p>
+								<p class="mb10 txtgray" id="book-phone-out"></p>
+								<p class="mb20" id="book-need-out"></p>
+								<p class="red mb20">Booking fee would be $1. Proceed?</p>
+								<a href="javascript:;" class="btn-finish">Confirm</a>
+							</div>
+							<div class="finished">
+								Thank you for using <strong style="font-weight:bold;"><em style="color:#820f0f;">Robo</em>Host</strong>.
+							</div>
+						</div>
+					</div>
+				</div>			
+			</div>
+		</div>
+	</div>
+	<div id="imported"></div>
+</body>
+</html>
